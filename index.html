@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>AAAAAAAAAAdle</title>
+<style>
+	body {
+		font-family: 'Arial';
+		font-weight: bold;
+	}
+</style>
+<script>
+var secret = 'AAAAAAAAAA';
+function guessfunc() {
+	var boxes = document.getElementsByTagName("span");
+	guess = document.getElementById("guess").value;
+	
+	for (var i = 0; i < 10; i++) {
+		if (guess[i] != secret[i] && typeof guess[i] != 'undefined') {
+			boxes[i].innerText = guess[i];
+			boxes[i].style.backgroundColor = "gray";
+		} else if (typeof guess[i] == 'undefined') {
+			boxes[i].innerHtml = '&nbsp;';
+			boxes[i].style.backgroundColor = "gray";
+		} else {
+			boxes[i].innerText = guess[i];
+			boxes[i].style.backgroundColor = "green";
+		}
+	}
+	
+	if (guess == secret) {
+		alert("AAAAAAAAAA");
+		console.log("AAAAAAAAAA");
+	}
+}
+</script>
+</head>
+<body>
+
+<h1>AAAAAAAAAAdle</h1>
+
+<!-- AAAAAAAAAA @TactiFail AAAAAAAAAA-->
+
+<label for="guess">AAAAAAAAAA:</label>
+<input type="text" id="guess" maxlength=10 onkeydown="return /[A-Z]/.test(event.key)" />
+<button type="button" onclick="guessfunc()">AAAAAAAAAA</button>
+
+<div>&nbsp;</div>
+
+<div id="guesses">
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+<span style="border: 1px solid black; color: white;">&nbsp;&nbsp;&nbsp;</span>
+</div>
+
+
+</body>
